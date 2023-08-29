@@ -1,0 +1,17 @@
+/* css to render the gig component */
+.gig {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.gig__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
