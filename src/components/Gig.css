@@ -1,17 +1,31 @@
 /* css to render the gig component */
 .gig {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    border-bottom: 1px solid #ccc;
 }
 
 .gig__title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Container for both favourited and unfavourited gigs */
+.gig-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.favourited-gig {
+    /* Displayed as a list on the left */
+    flex-basis: 50%; /* Takes up 50% of the container width */
+}
+
+.unfavourited-gig {
+    /* Displayed on the right, with reversed order */
+    flex-basis: 50%; /* Takes up 50% of the container width */
+    display: flex;
+    flex-direction: row-reverse; /* This reverses the order of content */
 }
