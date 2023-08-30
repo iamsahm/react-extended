@@ -1,18 +1,22 @@
-import Hello from "./components/Hello";
-import makersLogo from "./assets/Makers-Logo.png";
+// import Hello from "./components/Hello";
+// import makersLogo from "./assets/Makers-Logo.png";
 import "./App.css";
-import Profile from "./components/Profile";
-import Gig from "./components/Gig";
-import Product from "./components/Product";
-import Counter from "./components/Counter";
-import ClickListener from "./components/ClickListener";
-import Die from "./components/Die";
-import RPS from "./components/RPS";
+// import Profile from "./components/Profile";
+import GigList from "./components/Gig";
+// import Product from "./components/Product";
+// import Counter from "./components/Counter";
+// import ClickListener from "./components/ClickListener";
+// import Die from "./components/Die";
+// import RPS from "./components/RPS";
+// import Form from "./components/Form";
+// import Joke from "./components/Joke";
 
 function App() {
-  return (
-    <>
-      <Hello name="World" />
+    return (
+        <>
+            <GigList />
+            {/* <Form /> */}
+            {/* <Hello name="World" />
       <img className="logo" src={makersLogo}></img>
       <Profile name= 'Brave Matthews' birthdate='1960' job='braveman'/>
       <Gig bandname='Brave Matthews' timing='8pm' location='The Moon'/>
@@ -23,11 +27,9 @@ function App() {
       <Counter/>
       <ClickListener/>
       <Die/>
-      <RPS name='Alice'/>
-
-      
-    </>
-  );
+      <RPS name='Alice'/> */}
+        </>
+    );
 }
 
 export default App;

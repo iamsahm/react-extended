@@ -1,10 +1,9 @@
-import {React, useState }from "react";
+import { React, useState } from "react";
 import Choice from "./Choice";
 
 const RPS = (props) => {
     const [playerChoice, setPlayerChoice] = useState(null);
     const [computerChoice, setComputerChoice] = useState(null);
-
 
     const setplayerChoiceAndEmoji = (emoji) => {
         setPlayerChoice(emoji);
@@ -18,7 +17,7 @@ const RPS = (props) => {
         setComputerChoice(randomChoice);
     };
 
-    function winner () {
+    function winner() {
         if (playerChoice === computerChoice) {
             return "It's a tie!";
         } else if (playerChoice === "🪨" && computerChoice === "✂️") {
@@ -43,14 +42,12 @@ const RPS = (props) => {
             {/* render the computerchoice */}
             <h1 id="computerChoice">computer choice: {computerChoice}</h1>
             {/* render the winner with conditional */}
-            {playerChoice && (<h1 id="winner">{winner()}</h1>)}
-            
+            {playerChoice && <h1 id="winner">{winner()}</h1>}
             <button onClick={() => setplayerChoiceAndEmoji("🪨")}>Rock</button>
             <button onClick={() => setplayerChoiceAndEmoji("📄")}>Paper</button>
-            <button onClick={() => setplayerChoiceAndEmoji("✂️")}>Scissors</button>
-
-
-
+            <button onClick={() => setplayerChoiceAndEmoji("✂️")}>
+                Scissors
+            </button>
         </div>
     );
 };
