@@ -1,16 +1,18 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
+import "./gig.css";
+const backend_url = import.meta.env.VITE_BACKEND_URL;
+import { GigsContext } from "../App";
 
 const Favourited = (props) => {
     const [favourited, setFavourited] = useState(props.favourited);
-
     const toggleFavourited = () => {
-        setFavourited(!favourited);
-        fetch(`https://makers-gig-backend.onrender.com/favourite/${props.id}`, {
+        fetch(`${backend_url}/favourite/${props.id}`, {
             method: "POST",
-            body: JSON.stringify({ favourited: favourited }),
+            body: JSON.stringify({ favourited: !favourited }),
             credentials: "include",
             headers: { "Content-Type": "application/json" },
         });
+        setFavourited(!favourited);
     };
 
     return (
@@ -39,23 +41,42 @@ const Gig = (props) => {
 };
 
 const GigList = () => {
-    const [gigs, setGigs] = useState([]);
+    const { gigs, setGigs } = useContext(GigsContext);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://makers-gig-backend.onrender.com/events")
+        fetch(`${backend_url}/events`, {
+            credentials: "include",
+        })
             .then((response) => response.json())
             .then((data) => {
                 setGigs(data);
+                console.log(data[0].favourited);
                 setLoading(false);
             });
     }, []);
+    if (loading) return <p>Loading...</p>;
 
-    return loading ? (
-        <p>Loading...</p>
-    ) : (
+    const favouritedGigs = gigs.filter((gig) => gig.favourited);
+    const nonFavouritedGigs = gigs.filter((gig) => !gig.favourited);
+
+    return (
         <div id="gig-list" className="gig-container">
-            {gigs.map((gig) => (
+            <h2>Favorited Gigs</h2>
+            {favouritedGigs.map((gig) => (
+                <Gig
+                    key={gig.event_id}
+                    bandname={gig.bandname}
+                    description={gig.description}
+                    timing={gig.timing}
+                    location={gig.location}
+                    favourited={gig.favourited}
+                    id={gig.event_id}
+                />
+            ))}
+
+            <h2>Non-Favorited Gigs</h2>
+            {nonFavouritedGigs.map((gig) => (
                 <Gig
                     key={gig.event_id}
                     bandname={gig.bandname}

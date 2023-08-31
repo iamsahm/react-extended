@@ -21,6 +21,7 @@
 .favourited-gig {
     /* Displayed as a list on the left */
     flex-basis: 50%; /* Takes up 50% of the container width */
+    display: flex;
 }
 
 .unfavourited-gig {
