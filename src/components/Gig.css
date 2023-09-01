@@ -1,7 +1,7 @@
 /* css to render the gig component */
 .gig {
     width: 100%;
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 0 1rem;
     border-bottom: 1px solid #ccc;
 }
@@ -16,17 +16,55 @@
 .gig-container {
     display: flex;
     justify-content: space-between;
+    border: 1px solid black;
 }
 
-.favourited-gig {
-    /* Displayed as a list on the left */
-    flex-basis: 50%; /* Takes up 50% of the container width */
-    display: flex;
+.gig-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.unfavourited-gig {
-    /* Displayed on the right, with reversed order */
-    flex-basis: 50%; /* Takes up 50% of the container width */
-    display: flex;
-    flex-direction: row-reverse; /* This reverses the order of content */
+.gig-item {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.gig-item h2 {
+    margin-top: 0;
+}
+
+.gig-item .band-name {
+    font-weight: bold;
+}
+
+.gig-item .description {
+    margin-bottom: 10px;
+}
+
+.gig-item .time {
+    font-size: 12px;
+}
+
+.gig-item .location {
+    font-size: 12px;
+}
+
+.gig-item .favourited {
+    float: right;
+}
+
+.favourite-title,
+.nonfavourite-title {
+    margin-top: 0;
+}
+
+.favourited-gigs,
+.nonfavourited-gigs {
+    width: 50%;
+}
+
+.column {
+    flex: 1;
+    margin: 0 1rem; /* Add spacing between columns */
 }
