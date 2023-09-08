@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useGigs } from "../App";
+import "./Favourited.css";
+
 const backend_url = import.meta.env.VITE_BACKEND_URL;
 
 const Favourited = (props) => {
@@ -19,9 +21,11 @@ const Favourited = (props) => {
     };
 
     return (
-        <div id="favourited">
+        <div className="favourite-div" id="favourited">
             {favourited ? <span>❤️</span> : <span>🖤</span>}
-            <button onClick={toggleFavourited}>Favourite</button>
+            <button className="favourite-button" onClick={toggleFavourited}>
+                Favourite
+            </button>
         </div>
     );
 };

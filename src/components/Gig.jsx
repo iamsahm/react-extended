@@ -1,5 +1,3 @@
-import { React } from "react";
-import "./gig.css";
 import PropTypes from "prop-types";
 
 const Gig = (props) => {

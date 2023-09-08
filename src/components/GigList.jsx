@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { useEffect } from "react";
 import "./gig.css";
 import { useGigs } from "../App";
 import Gig from "./Gig";

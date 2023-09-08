@@ -24,7 +24,7 @@ export const useGigs = () => {
             });
     }
 
-    return { gigs, setGigs, loading, fetchGigs };
+    return { gigs, setGigs, loading, fetchGigs, setLoading };
 };
 
 function App() {
