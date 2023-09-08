@@ -4,6 +4,7 @@
 .gig-container {
     display: flex;
     justify-content: space-between; /* Space columns evenly */
+    padding: 10px;
 }
 
 /* Style for each column (Favorited and Non-Favorited Gigs) */
@@ -31,6 +32,7 @@
     border-style: groove;
     border-radius: 8px;
     border-color: azure;
+    position: relative;
 }
 
 /* Style for Favourited gig items */
@@ -44,6 +46,8 @@
 }
 
 /* Style for Favourited component inside each gig container */
-.favourite {
-    margin-left: 8px; /* Add some spacing between the Gig and Favourited components */
+#favourited {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

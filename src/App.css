@@ -1,11 +1,8 @@
-/* App.css */
-
-/* Reset default margin and padding for the entire page */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8; /* Set a background color for the entire page */
+    background-color: #f8f8f828;
 }
 
 /* Style for the main content area */
