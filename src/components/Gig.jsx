@@ -10,12 +10,12 @@ const Gig = (props) => {
                     props.favourited ? "favourited-gig" : "unfavourited-gig"
                 }
             >
-                <h3 className="band_name">{props.band_name}</h3>
-                <p className="description">
-                    {props?.description.slice(0, 50) + "..."}
+                <h3 id="band_name">{props.band_name}</h3>
+                <p id="description">
+                    {props?.description.slice(0, 100) + "..."}
                 </p>
-                <p className="timing">{props.time}</p>
-                <p className="location">{props.location}</p>
+                <p id="timing">{props.time}</p>
+                <p id="location">{props.location}</p>
             </div>
         </div>
     );

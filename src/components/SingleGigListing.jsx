@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Favourited from "./Favourited";
 import { useGigs } from "../App";
+import "./SingleGigListing.css";
 
 const SingleGigListing = () => {
     const { id } = useParams();
@@ -23,10 +24,10 @@ const SingleGigListing = () => {
                 <p>Loading...</p>
             ) : gig ? (
                 <>
-                    <h2 className="band_name">{gig.band_name}</h2>
-                    <p className="description">{gig.description}</p>
-                    <p className="timing">{gig.time}</p>
-                    <p className="location">{gig.location}</p>
+                    <h2 id="name">{gig.band_name}</h2>
+                    <p id="desc">{gig.description}</p>
+                    <p id="time">{gig.time}</p>
+                    <p id="where">{gig.location}</p>
                     <Favourited
                         className="favourite"
                         favourited={gig.favourited}

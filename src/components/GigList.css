@@ -28,6 +28,9 @@
 .gig-item {
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
     margin: 5px;
+    border-style: groove;
+    border-radius: 8px;
+    border-color: azure;
 }
 
 /* Style for Favourited gig items */
@@ -42,7 +45,5 @@
 
 /* Style for Favourited component inside each gig container */
 .favourite {
-    display: flex;
-    align-items: right; /* Align the icon and text vertically */
     margin-left: 8px; /* Add some spacing between the Gig and Favourited components */
 }

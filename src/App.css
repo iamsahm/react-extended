@@ -16,11 +16,27 @@ body {
 }
 
 a {
+    position: relative;
     text-decoration: none;
     color: #3498db; /* Change link color to your liking */
 }
 
+/* Add a pseudo-element for the underline effect */
+a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Adjust the height to your preference */
+    bottom: 0;
+    left: 0;
+    background-color: #3498db; /* Match the link color */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
 /* Hover effect for links */
-a:hover {
-    text-decoration: underline;
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }

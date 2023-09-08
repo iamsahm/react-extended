@@ -11,10 +11,9 @@
     color: white;
     border: none;
     padding: 4px 10px;
-    cursor: pointer;
     border-radius: 4px;
-    font-size: auto;
     transition: background-color 0.3s ease; /* Add a smooth color transition */
+    margin: 10px;
 }
 
 /* Style the button on hover */
