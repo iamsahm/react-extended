@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./gig.css";
+import "./Gig.css";
 import { useGigs } from "../App";
 import Gig from "./Gig";
 import { Link } from "react-router-dom";

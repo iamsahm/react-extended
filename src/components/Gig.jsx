@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./Gig.css";
 
 const Gig = (props) => {
     return (
@@ -15,7 +16,7 @@ const Gig = (props) => {
         </div>
     );
 };
-// set the proptypes for the gig component
+
 Gig.propTypes = {
     band_name: PropTypes.string,
     description: PropTypes.string,
