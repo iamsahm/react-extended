@@ -1,70 +1,16 @@
-/* css to render the gig component */
-.gig {
-    width: 100%;
-    margin: 5px auto;
-    padding: 0 1rem;
-    border-bottom: 1px solid #ccc;
-}
+/* Gig.css */
 
-.gig__title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-/* Container for both favourited and unfavourited gigs */
-.gig-container {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-}
-
-.gig-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.gig-item {
-    border-bottom: 1px solid black;
-    padding: 10px;
-}
-
-.gig-item h2 {
-    margin-top: 0;
-}
-
-.gig-item .band-name {
+/* Style for links */
+.gig-container a {
+    text-decoration: none;
+    color: #3498db; /* Change link color to your liking */
     font-weight: bold;
 }
 
-.gig-item .description {
-    margin-bottom: 10px;
+.gig-container {
 }
 
-.gig-item .time {
-    font-size: 12px;
-}
-
-.gig-item .location {
-    font-size: 12px;
-}
-
-.gig-item .favourited {
-    float: right;
-}
-
-.favourite-title,
-.nonfavourite-title {
-    margin-top: 0;
-}
-
-.favourited-gigs,
-.nonfavourited-gigs {
-    width: 50%;
-}
-
-.column {
-    flex: 1;
-    margin: 0 1rem; /* Add spacing between columns */
+/* Hover effect for links */
+.gig-container a:hover {
+    text-decoration: underline;
 }

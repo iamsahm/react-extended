@@ -12,16 +12,24 @@ export const useGigs = () => {
     const [loading, setLoading] = useState(true);
 
     function fetchGigs() {
-        fetch(`${backend_url}/events`, {
-            credentials: "include",
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                if (JSON.stringify(data) !== JSON.stringify(gigs)) {
-                    setGigs(data);
+        return new Promise((resolve, reject) => {
+            fetch(`${backend_url}/events`, {
+                credentials: "include",
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (JSON.stringify(data) !== JSON.stringify(gigs)) {
+                        setGigs(data);
+                    }
                     setLoading(false);
-                }
-            });
+                    resolve();
+                })
+                .catch((error) => {
+                    console.error("Error fetching gigs:", error);
+                    setLoading(false);
+                    reject(error);
+                });
+        });
     }
 
     return { gigs, setGigs, loading, fetchGigs, setLoading };

@@ -1,14 +1,7 @@
-/* Favourited.css */
-
-/* Styling for the entire Favourited component */
-.favourite-div {
-    display: box;
-    align-items: center;
-}
+/* Favourited.css
 
 /* Styling for the heart/like icon */
 .favourite-div span {
-    font-size: 28px;
     margin-right: 4px;
 }
 
@@ -17,12 +10,11 @@
     background-color: #3498db; /* Change background color to your liking */
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 4px 10px;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: auto;
     transition: background-color 0.3s ease; /* Add a smooth color transition */
-    flex-shrink: 0; /* Prevent the button from shrinking */
 }
 
 /* Style the button on hover */

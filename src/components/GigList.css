@@ -1,0 +1,48 @@
+/* GigList.css */
+
+/* Style for the entire GigList component */
+.gig-container {
+    display: flex;
+    justify-content: space-between; /* Space columns evenly */
+}
+
+/* Style for each column (Favorited and Non-Favorited Gigs) */
+.column {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    margin: 0 8px;
+}
+
+/* Title styles for Favorited and Non-Favorited Gigs */
+.favourite-title,
+.nonfavourite-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333; /* Change text color to your liking */
+    text-align: center; /* Center the titles horizontally */
+}
+
+/* Style for each gig container */
+.gig-item {
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+}
+
+/* Style for Favourited gig items */
+#favourited-gig {
+    background-color: #e6f7ff; /* Change the background color for favourited gigs */
+}
+
+/* Style for Non-Favourited gig items */
+#unfavourited-gig {
+    background-color: #f2f2f2; /* Change the background color for non-favourited gigs */
+}
+
+/* Style for Favourited component inside each gig container */
+.favourite {
+    display: flex;
+    align-items: right; /* Align the icon and text vertically */
+    margin-left: 8px; /* Add some spacing between the Gig and Favourited components */
+}

@@ -22,8 +22,8 @@ const Favourited = (props) => {
 
     return (
         <div className="favourite-div" id="favourited">
-            {favourited ? <span>❤️</span> : <span>🖤</span>}
             <button className="favourite-button" onClick={toggleFavourited}>
+                {favourited ? <span>❤️</span> : <span>🖤</span>}
                 Favourite
             </button>
         </div>
