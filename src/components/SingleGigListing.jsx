@@ -19,24 +19,26 @@ const SingleGigListing = () => {
     }, [fetchGigs, gigs, id, setLoading]);
 
     return (
-        <div id="singlegig" className="single-gig-container">
-            {loading ? (
-                <p>Loading...</p>
-            ) : gig ? (
-                <>
-                    <h2 id="name">{gig.band_name}</h2>
-                    <p id="desc">{gig.description}</p>
-                    <p id="time">{gig.time}</p>
-                    <p id="where">{gig.location}</p>
-                    <Favourited
-                        className="favourite"
-                        favourited={gig.favourited}
-                        id={gig.event_id}
-                    />
-                </>
-            ) : (
-                <p>Gig not found</p>
-            )}
+        <div className="center">
+            <div id="singlegig" className="single-gig-container">
+                {loading ? (
+                    <p>Loading...</p>
+                ) : gig ? (
+                    <>
+                        <h2 id="name">{gig.band_name}</h2>
+                        <p id="desc">{gig.description}</p>
+                        <p id="time">{gig.time}</p>
+                        <p id="where">{gig.location}</p>
+                        <Favourited
+                            className="favourite"
+                            favourited={gig.favourited}
+                            id={gig.event_id}
+                        />
+                    </>
+                ) : (
+                    <p>Gig not found</p>
+                )}
+            </div>
         </div>
     );
 };

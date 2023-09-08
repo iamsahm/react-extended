@@ -1,35 +1,26 @@
-# React Application Template
+# Gig listing front end application
 
-This is a simple template for a React application.
+This program runs a front-end for a gig listing api hosted on the Maker's Academy render server.
+[It is deployed here](https://gig-list.onrender.com/)
+It:
 
-This template uses:
-
-- [Vite](https://vitejs.dev/) for bundling and running the dev server.
-- [Vitest](https://vitest.dev/) for testing, along with
-  [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [ESLint](https://eslint.org/) for linting
+-   Displays a list of gigs
+-   Allows a user to favourite/unfavourite a gig and see the favourites updated in the list.
+-   Has links to each gig's individual listing which also has a favourite feature.
 
 ## Installation
 
-To create a fresh copy of this project, you can use the tool `degit`:
+In the event that you want to run this program locally
 
-```zsh
-npx degit makersacademy/react-template my-project --mode=git
-
-cd my-project
-
-npm install
-```
-
-The following can all be found under the "scripts" section in your
-`package.json`. You can add more scripts here if you like, and run them with
-`npm run my-script`.
+````
+npm i
+npm run dev```
 
 ### Running in Development Mode
 
 ```zsh
 npm run dev
-```
+````
 
 ### Running Tests
 
