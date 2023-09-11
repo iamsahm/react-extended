@@ -47,16 +47,18 @@ const GigList = () => {
                                         : "unfavourited-gig"
                                 }
                             >
-                                <Link to={`/${gig.event_id}`}>
-                                    <Gig
-                                        band_name={gig.band_name}
-                                        description={gig.description}
-                                        time={gig.time}
-                                        location={gig.location}
-                                        favourited={gig.favourited}
-                                        id={gig.event_id}
-                                    />
-                                </Link>
+                                <div className="gig">
+                                    <Link to={`/${gig.event_id}`}>
+                                        <Gig
+                                            band_name={gig.band_name}
+                                            description={gig.description}
+                                            time={gig.time}
+                                            location={gig.location}
+                                            favourited={gig.favourited}
+                                            id={gig.event_id}
+                                        />
+                                    </Link>
+                                </div>
                                 <Favourited
                                     className="favourite"
                                     favourited={gig.favourited}

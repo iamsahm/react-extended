@@ -57,3 +57,7 @@ npm run lint
 ```zsh
 npm run build
 ```
+
+### Demo
+
+![Demo](./demo.gif)
