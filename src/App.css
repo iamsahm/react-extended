@@ -37,12 +37,3 @@ a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
 }
-
-@viewport {
-    width: device-width;
-    zoom: 1;
-}
-
-@media screen and (max-width: 320px) {
-    /* CSS for screens that are 320 pixels or less will be put in this section */
-}

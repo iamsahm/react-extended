@@ -40,12 +40,6 @@ function App() {
 
     return (
         <>
-            <head>
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-            </head>
             <GigsContext.Provider value={{ gigs, setGigs }}>
                 <Router>
                     <Routes>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Favourited from "./Favourited";
 
 const GigList = () => {
-    const { gigs, fetchGigs, loading } = useGigs();
+    const { gigs, fetchGigs } = useGigs();
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
