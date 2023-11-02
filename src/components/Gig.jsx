@@ -14,7 +14,16 @@ const Gig = (props) => {
                 <p id="description">
                     {props?.description.slice(0, 100) + "..."}
                 </p>
-                <p id="timing">{props.time}</p>
+                <p id="time">
+                    {new Date(props.time).toLocaleString(undefined, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        hour12: true,
+                    })}
+                </p>
                 <p id="location">{props.location}</p>
             </div>
         </div>

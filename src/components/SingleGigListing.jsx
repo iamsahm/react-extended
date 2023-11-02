@@ -27,7 +27,16 @@ const SingleGigListing = () => {
                     <>
                         <h2 id="name">{gig.band_name}</h2>
                         <p id="desc">{gig.description}</p>
-                        <p id="time">{gig.time}</p>
+                        <p id="time">
+                            {new Date(gig.time).toLocaleString(undefined, {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                hour12: true,
+                            })}
+                        </p>
                         <p id="where">{gig.location}</p>
                         <Favourited
                             className="favourite"

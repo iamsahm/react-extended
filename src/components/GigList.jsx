@@ -6,25 +6,17 @@ import { Link } from "react-router-dom";
 import Favourited from "./Favourited";
 
 const GigList = () => {
-    const { gigs, fetchGigs } = useGigs();
-    const [isLoading, setIsLoading] = useState(true);
+    const { gigs, fetchGigs, loading, setLoading } = useGigs();
 
     useEffect(() => {
-        fetchGigs()
-            .then(() => {
-                setIsLoading(false);
-            })
-            .catch((error) => {
-                console.error("Error fetching gigs:", error);
-                setIsLoading(false);
-            });
+        fetchGigs();
     }, [fetchGigs]);
 
     const renderGigs = (gigs, isFavorited) => {
         return (
             <div className="column">
-                {isLoading && <p>Loading...</p>}
-                {!isLoading && (
+                {loading && <p>Loading...</p>}
+                {!loading && (
                     <>
                         <h2
                             className={
