@@ -48,14 +48,15 @@ const GigList = () => {
                                             location={gig.location}
                                             favourited={gig.favourited}
                                             id={gig.event_id}
-                                        />
+                                        >
+                                            <Favourited
+                                                className="favourite"
+                                                favourited={gig.favourited}
+                                                id={gig.event_id}
+                                            />
+                                        </Gig>
                                     </Link>
                                 </div>
-                                <Favourited
-                                    className="favourite"
-                                    favourited={gig.favourited}
-                                    id={gig.event_id}
-                                />
                             </div>
                         ))}
                     </>

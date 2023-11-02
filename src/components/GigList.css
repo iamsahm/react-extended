@@ -45,8 +45,13 @@
     background-color: #f2f2f2; /* Change the background color for non-favourited gigs */
 }
 
-/* Style for Favourited component inside each gig container */
-#favourited {
+.location-favourite-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#favourite-button-container {
     position: absolute;
     bottom: 0;
     right: 0;

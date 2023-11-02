@@ -24,7 +24,10 @@ const Gig = (props) => {
                         hour12: true,
                     })}
                 </p>
-                <p id="location">{props.location}</p>
+                <div className="location-favourite-container">
+                    <p id="location">{props.location}</p>
+                    {props.children}
+                </div>
             </div>
         </div>
     );
