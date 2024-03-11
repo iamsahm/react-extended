@@ -54,9 +54,6 @@ const GigList = () => {
                                                 className="favourite"
                                                 favourited={gig.favourited}
                                                 id={gig.event_id}
-                                                onClick={(event) =>
-                                                    event.stopPropagation()
-                                                }
                                             />
                                         </Gig>
                                     </Link>

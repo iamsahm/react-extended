@@ -8,8 +8,8 @@ const backend_url = import.meta.env.VITE_BACKEND_URL;
 const Favourited = (props) => {
     const [favourited, setFavourited] = useState(props.favourited);
     const { fetchGigs } = useGigs();
-    const toggleFavourited = () => {
-        event.stopPropagation();
+    const toggleFavourited = (event) => {
+        event.preventDefault();
         fetch(`${backend_url}/favourite/${props.id}`, {
             method: "POST",
             body: JSON.stringify({ favourited: !favourited }),
