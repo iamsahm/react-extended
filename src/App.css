@@ -12,6 +12,14 @@ body {
     padding: 16px;
 }
 
+p {
+    color: #333;
+}
+
+h3 {
+    color: #130341;
+}
+
 a {
     position: relative;
     text-decoration: none;

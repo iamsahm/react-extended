@@ -1,0 +1,21 @@
+/* LoadingModal.css */
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: auto 1rem;
+    border-color: azure;
+}
+
+dialog p {
+    color: #333;
+    text-align: center;
+}

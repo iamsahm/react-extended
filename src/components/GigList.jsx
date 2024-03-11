@@ -16,7 +16,7 @@ const GigList = () => {
     const renderGigs = (gigs, isFavorited) => {
         return (
             <div className="column">
-                {loading && <LoadingModal />}
+                {loading && "Loading..."}
                 {!loading && (
                     <>
                         <h2
@@ -71,6 +71,7 @@ const GigList = () => {
 
     return (
         <div id="gig-list" className="gig-container">
+            {loading && <LoadingModal />}
             {renderGigs(favouritedGigs, true)}
             {renderGigs(nonFavouritedGigs, false)}
         </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useGigs } from "../App";
+import "./LoadingModal.css";
 
 const LoadingModal = () => {
     const { loading } = useGigs();
