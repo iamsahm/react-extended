@@ -4,6 +4,7 @@ import { useGigs } from "../App";
 import Gig from "./Gig";
 import { Link } from "react-router-dom";
 import Favourited from "./Favourited";
+import LoadingModal from "./LoadingModal";
 
 const GigList = () => {
     const { gigs, fetchGigs, loading, setLoading } = useGigs();
@@ -15,7 +16,7 @@ const GigList = () => {
     const renderGigs = (gigs, isFavorited) => {
         return (
             <div className="column">
-                {loading && <p>Loading...</p>}
+                {loading && <LoadingModal />}
                 {!loading && (
                     <>
                         <h2
@@ -53,6 +54,9 @@ const GigList = () => {
                                                 className="favourite"
                                                 favourited={gig.favourited}
                                                 id={gig.event_id}
+                                                onClick={(event) =>
+                                                    event.stopPropagation()
+                                                }
                                             />
                                         </Gig>
                                     </Link>

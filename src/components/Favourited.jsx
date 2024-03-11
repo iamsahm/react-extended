@@ -9,6 +9,7 @@ const Favourited = (props) => {
     const [favourited, setFavourited] = useState(props.favourited);
     const { fetchGigs } = useGigs();
     const toggleFavourited = () => {
+        event.stopPropagation();
         fetch(`${backend_url}/favourite/${props.id}`, {
             method: "POST",
             body: JSON.stringify({ favourited: !favourited }),

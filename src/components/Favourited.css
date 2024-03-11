@@ -7,16 +7,16 @@
 
 /* Styling for the Favourite button */
 .favourite-button {
-    background-color: #3498db; /* Change background color to your liking */
+    background-color: #3498db;
     color: white;
     border: none;
     padding: 4px 10px;
     border-radius: 4px;
-    transition: background-color 0.3s ease; /* Add a smooth color transition */
+    transition: background-color 0.3s ease;
     margin: 10px;
 }
 
 /* Style the button on hover */
 .favourite-button:hover {
-    background-color: #2980b9; /* Change the hover background color */
+    background-color: #2980b9;
 }
